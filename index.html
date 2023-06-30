@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation using javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <main>
+
+
+        <div class="heading">
+            <h5>Form Validation</h5>
+        </div>
+        <form action="page.php" method="post" name="myform" onsubmit="return validateform()">
+
+
+
+            <div class="form-group" id="name">
+                <input type="text" name="fname" id="name-error" placeholder="username" required>
+
+
+            </div>
+            <p class="name-error error"></p>
+
+            <div class="form-group" id="pass">
+                <input type="password" name="fpass" id="pass-error" placeholder="password" minlength="6" maxlength="6" required>
+
+            </div>
+            <p class="pass-error error"></p>
+
+
+            <div class="form-group" id="cpass">
+                <input type="password" name="fcpass" id="cpass-error" placeholder="confirm password" minlength="6" maxlength="6" required>
+
+            </div>
+            <p class="cpass-error error"></p>
+
+
+            <div class="form-group" id="email">
+                <input type="email" name="femail" id="email-error" maxlength="30" placeholder="email" required>
+
+            </div>
+            <p class="email-error error"></p>
+
+
+            <div class="form-group" id="phone">
+                <input type="tel" name="fphone" id="phone-error" placeholder="phone number" minlength="10" maxlength="10" required>
+
+            </div>
+            <p class="phone-error error"></p>
+
+
+
+            <div class="form-group ">
+                <button type="submit" class="sbtn btn">submit</button>
+                <button type="reset" class="rbtn btn" onclick="clearErrors()">cancel</button>
+            </div>
+
+
+
+
+
+
+
+
+        </form>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
